@@ -1,0 +1,55 @@
+
+@mixin body-layout{
+    *, &::after, &::before{ 
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;}
+       
+
+}
+
+@mixin navbar ($color, $width,$height,$justify){
+    display: flex;
+    align-items: center;
+    justify-content:$justify;
+    background-color: $color;
+    height: $height;
+    width: $width;
+    list-style: none;
+      
+
+}
+@mixin header-anchor {
+    text-decoration: none;
+    color: white;
+    &:hover{
+        transform: scale(2);
+        background-color: $color
+    }
+    &:link,&:visited{
+        color: white;
+    }
+
+}
+:root{
+    @include body-layout();
+}
+nav {
+    ul{
+      @include navbar($color, 100vw, 10vh, space-evenly);  
+    }
+    a{
+        @include header-anchor();
+    }
+    
+}
+@mixin box-sizing($width, $height) {
+    height:$height;
+    width:$width;
+    background-color: orange;
+    border-radius: 20%;
+    position: absolute;
+    left: 3rem;
+    top: 6rem;
+
+}
