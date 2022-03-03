@@ -1,5 +1,5 @@
 /* link the variable before the Mixin when connected it after it didn't work */
 @import "./variable";
-@import "./mixin";
-@import "./body";
 @import "./maps";
+@import "./mixins";
+@import "./body";

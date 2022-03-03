@@ -1,4 +1,4 @@
 .box1{
     @include box-sizing(3rem, 3rem);
-    
+    @include font-size("s");
 }

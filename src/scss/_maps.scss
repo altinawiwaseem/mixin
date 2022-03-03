@@ -11,3 +11,19 @@ $bg-color:(
     dark-bg:#333
 
 );
+
+//this the best use of map using mixins
+@mixin font-size($size){
+    
+    @if map-has-key($font-size,$size){
+//true
+font-size: map-get($font-size,$size);
+    }
+    // false
+    @else{
+@error "#{$size} is not exist";
+    }
+    
+}
+
+// this the best use of map using function
